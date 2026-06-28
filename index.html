@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Maishanu Patent Medicine Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modern Reset & Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #007a87 0%, #00a896 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 25px;
+        }
+
+        .welcome-note {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #007a87;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        /* Search Section Layout */
+        .search-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid #cbd5e1;
+            border-radius: 30px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .search-box:focus {
+            border-color: #00a896;
+            box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.15);
+        }
+
+        /* Section Header */
+        .section-title {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #00a896;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        /* Services Grid Layout */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+            border-left: 5px solid #00a896;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Card Header Spacing & Layout */
+        .card-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        /* Visual Style for Icons */
+        .service-icon {
+            font-size: 1.4rem;
+            color: #00a896;
+            background: #e6f7f4;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .service-card h3 {
+            color: #007a87;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .service-number {
+            background: #e0f4f5;
+            color: #007a87;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Store Information Section */
+        .info-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .info-block h4 {
+            color: #007a87;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-block p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .info-block a {
+            color: #00a896;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info-block a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 50px;
+            background: #eef2f1;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Maishanu Patent Medicine Store</h1>
+        <p>We are committed to providing quality, safe, and affordable healthcare products. The availability of over-the-counter medicines, health supplies, first aid products, and wellness materials makes our patent medicine store unique. Customer care and trusted service are our priorities. We aim to be healthy and reliable for everyone.</p>
+    </header>
+
+    <div class="container">
+        <p class="welcome-note">Thank you for choosing us!</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchBar" class="search-box" placeholder="Search for services, medicines, or tests...">
+        </div>
+
+        <h2 class="section-title">Common Services Offered</h2>
+        
+        <div class="services-grid" id="servicesGrid">
+            
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-pills"></i></div>
+                    <span class="service-number">01</span>
+                </div>
+                <h3>Pain Relievers</h3>
+                <p>Over-the-counter management for aches and pains.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-bottle-droplet"></i></div>
+                    <span class="service-number">02</span>
+                </div>
+                <h3>Cough Syrups</h3>
+                <p>Remedies for cold, flu, and respiratory relief.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-tablets"></i></div>
+                    <span class="service-number">03</span>
+                </div>
+                <h3>Malaria Drugs</h3>
+                <p>Essential anti-malarial treatments and medications.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-capsules"></i></div>
+                    <span class="service-number">04</span>
+                </div>
+                <h3>Vitamins</h3>
+                <p>Daily supplements to support your health and immunity.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                    <span class="service-number">05</span>
+                </div>
+                <h3>First Aid Medicines</h3>
+                <p>Emergency medical essentials for swift home care.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-user-nurse"></i></div>
+                    <span class="service-number">06</span>
+                </div>
+                <h3>First Aid Treatment</h3>
+                <p>Immediate care resources for minor accidents.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                    <span class="service-number">07</span>
+                </div>
+                <h3>Minor Wound Care</h3>
+                <p>Solutions for managing small cuts, scrapes, and burns.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-band-aid"></i></div>
+                    <span class="service-number">08</span>
+                </div>
+                <h3>Bandaging</h3>
+                <p>Sterile dressings, gauze, and medical tapes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-pump-medical"></i></div>
+                    <span class="service-number">09</span>
+                </div>
+                <h3>Antiseptic Application</h3>
+                <p>Disinfectants to keep wounds clean and infection-free.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <span class="service-number">10</span>
+                </div>
+                <h3>Blood Pressure Checking</h3>
+                <p>In-store monitoring to help track your cardiovascular health.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <span class="service-number">11</span>
+                </div>
+                <h3>Blood Sugar Testing</h3>
+                <p>Quick glucose level screening and monitoring.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-weight-scale"></i></div>
+                    <span class="service-number">12</span>
+                </div>
+                <h3>Weight Measurement</h3>
+                <p>Accurate scales to assist with health and fitness goals.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <span class="service-number">13</span>
+                </div>
+                <h3>Blood Pressure Testing</h3>
+                <p>Regular check-ups to support long-term wellness tracking.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-comment-medical"></i></div>
+                    <span class="service-number">14</span>
+                </div>
+                <h3>Health Advice & Counseling</h3>
+                <p>Basic, trusted guidance regarding your OTC medications.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                    <span class="service-number">15</span>
+                </div>
+                <h3>Sale of Medical Supplies</h3>
+                <p>Access to verified home healthcare products.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                    <span class="service-number">16</span>
+                </div>
+                <h3>Thermometers</h3>
+                <p>Reliable temperature monitoring tools for the whole family.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+                    <span class="service-number">17</span>
+                </div>
+                <h3>Syringes (2ml / 5ml / 10ml)</h3>
+                <p>Sterile, safe delivery equipment in multiple sizes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header-row">
+                    <div class="service-icon"><i class="fa-solid fa-hand-holding-hand"></i></div>
+                    <span class="service-number">18</span>
+                </div>
+                <h3>Disposable & Surgical Gloves</h3>
+                <p>High-grade protection to maintain sanitary environments.</p>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Store & Contact Information</h2>
+        <div class="info-section">
+            <div class="info-block">
+                <h4><i class="fa-regular fa-clock"></i> Opening Hours</h4>
+                <p>Monday - Sunday: 8:00 AM - 10:00 PM<br></p>
+            </div>
+            <div class="info-block">
+                <h4><i class="fa-solid fa-location-dot"></i> Our Location</h4>
+                <p>Maishanu Patent Medicine Store<br>Laje Road, Opp. third jumuat mosque GUMMI</p>
+            </div>s
+            <div class="info-block">
+                <h4><i class="fa-solid fa-phone"></i> Contact Us</h4>
+                <p>Have questions? Give us a call:<br><a href="tel:+2348064645469">+2348064645469,+2348165774697
+                +23461944043</a></p>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Maishanu Patent Medicine Store. All rights reserved.
+    </footer>
+
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const cards = document.querySelectorAll('.service-card');
+
+        searchBar.addEventListener('keyup', (e) => {
+            const searchString = e.target.value.toLowerCase();
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchString) || description.includes(searchString)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
